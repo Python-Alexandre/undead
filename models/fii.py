@@ -16,7 +16,6 @@ class Fii(Base):
 
     papel = Column(Text, nullable=False)
     segmento = Column(Text)
-
     cotacao = Column(Numeric)
     ffo_yield = Column(Numeric)
     dividend_yield = Column(Numeric)
