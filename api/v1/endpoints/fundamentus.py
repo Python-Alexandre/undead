@@ -8,7 +8,7 @@ router = APIRouter()
 @router.get("/acoes")
 def list_acoes_all(
     skip: int = 0,
-    limit: int = 10,
+    limit: int = 1000,
     db: Session = Depends(get_db)
 ):
     return list_acoes(db, skip, limit)
@@ -16,7 +16,7 @@ def list_acoes_all(
 @router.get("/fiis")
 def list_fiis_all(
     skip: int = 0,
-    limit: int = 10,
+    limit: int = 1000,
     db: Session = Depends(get_db)
 ):
     return list_fiis(db, skip, limit)
