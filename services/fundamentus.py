@@ -7,3 +7,7 @@ def list_acoes(db: Session, skip: int = 0, limit: int = 10):
 
 def list_fiis(db: Session, skip: int = 0, limit: int = 10):
     return list_fiis_all(db, skip, limit)
+
+def update_acoes_all(db: Session):
+    # Placeholder for the update logic
+    pass
