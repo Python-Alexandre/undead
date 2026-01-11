@@ -5,3 +5,6 @@ psycopg[binary]
 pydantic-settings
 pydantic[email]
 python-dotenv
+requests
+pandas
+lxml

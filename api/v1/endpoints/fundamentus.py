@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from api.deps import get_db
-from services.fundamentus import list_acoes, list_fiis, update_acoes_all
+from services.fundamentus import list_acoes, list_fiis, update_all
 
 router = APIRouter()
 
@@ -21,8 +21,8 @@ def list_fiis_all(
 ):
     return list_fiis(db, skip, limit)
 
-@router.get("/update_acoes")
-def update_acoes(
+@router.get("/update")
+def update(
     db: Session = Depends(get_db)
 ):
-    return update_acoes_all(db)
+    return update_all(db)

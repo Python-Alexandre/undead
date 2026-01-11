@@ -29,3 +29,6 @@ jobs:
             else
               git clone "$REPO_URL" .
             fi
+
+            pip install -r requirements.txt
+

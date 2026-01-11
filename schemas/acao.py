@@ -4,18 +4,34 @@ from datetime import datetime
 
 
 class AcaoBase(BaseModel):
-    name: str
-    email: EmailStr
-
+    papel: str
+    data_coleta: datetime
 
 class AcaoCreate(AcaoBase):
-    password: str
-
+    cotacao: float
+    pl: float
+    pvp: float
+    psr: float
+    dividend_yield: float
+    p_ativo: float
+    p_cap_giro: float
+    p_ebit: float
+    p_ativ_circ_liqs: float
+    ev_ebit: float
+    ev_ebitda: float
+    mrg_ebit: float
+    mrg_liq: float
+    roic: float
+    roe: float
+    liq_corr: float
+    liq_2_meses: float
+    patrim_liq: float
+    div_brut_patrim: float
+    cresc_rec_5_a: float
 
 class AcaoUpdate(BaseModel):
-    name: Optional[str] = None
-    email: Optional[EmailStr] = None
-
+    papel: Optional[str] = None
+    data_coleta: Optional[datetime] = None
 
 class AcaoResponse(AcaoBase):
     id: int
