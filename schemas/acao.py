@@ -5,9 +5,6 @@ from datetime import datetime
 
 class AcaoBase(BaseModel):
     papel: str
-    data_coleta: datetime
-
-class AcaoCreate(AcaoBase):
     cotacao: float
     pl: float
     pvp: float
@@ -29,13 +26,12 @@ class AcaoCreate(AcaoBase):
     div_brut_patrim: float
     cresc_rec_5_a: float
 
-class AcaoUpdate(BaseModel):
-    papel: Optional[str] = None
-    data_coleta: Optional[datetime] = None
+class AcaoCreate(AcaoBase):
+    data_coleta: datetime
 
 class AcaoResponse(AcaoBase):
     id: int
-    created_at: datetime
+    data_coleta: datetime
 
     class Config:
         from_attributes = True  # necessário para SQLAlchemy
